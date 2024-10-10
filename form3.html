@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Lead Form</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DKd0000031L9q" method="POST">
+      <input type="hidden" name="oid" value="00DKd0000031L9q">
+      <input type="hidden" name="retURL" value="http://">
+
+      <label for="first_name">First Name</label>
+      <input id="first_name" maxlength="40" name="first_name" type="text" />
+
+      <label for="last_name">Last Name</label>
+      <input id="last_name" maxlength="80" name="last_name" type="text" />
+
+      <label for="email">Email</label>
+      <input id="email" maxlength="80" name="email" type="text" />
+
+      <label for="company">Company</label>
+      <input id="company" maxlength="40" name="company" type="text" />
+
+      <label for="city">City</label>
+      <input id="city" maxlength="40" name="city" type="text" />
+
+      <label for="state">State/Province</label>
+      <input id="state" maxlength="20" name="state" type="text" />
+
+      <input type="submit" name="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
